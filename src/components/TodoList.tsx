@@ -189,6 +189,11 @@ export const TodoList = () => {
                       {todo.priority}
                     </span>
                   )}
+                  {todo.dueDate && (
+                    <span className="text-xs px-2 py-1 rounded-xl bg-purple-500/5 text-purple-600 border border-purple-500/10">
+                      {format(new Date(todo.dueDate), "MMM dd, yyyy")}
+                    </span>
+                  )}
                 </div>
               </div>
               <div className="flex items-center gap-1">
