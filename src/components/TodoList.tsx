@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useEffect, useState } from "react";
@@ -122,7 +123,12 @@ export const TodoList = () => {
 
       {filteredTodos.length === 0 ? (
         <div className="text-center py-8 text-gray-500 px-4 lg:px-0">
-          No todos for this date. Click the + button to create one.
+          <img
+            src="https://illustrations.popsy.co/white/remote-work.svg"
+            alt="No todos for this date"
+            className="w-[500px] mx-auto"
+          />
+          Nothing added yet. Click the + button to add your first todo.
         </div>
       ) : (
         <ul className="space-y-2 px-4 lg:px-0">
