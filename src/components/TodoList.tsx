@@ -39,7 +39,7 @@ export const TodoList = () => {
         handleDateChange={handleDateChange}
       />
       <div className="flex justify-between items-center px-4 lg:px-0">
-        <h2 className="text-2xl font-bold">
+        <h2 className="text-xl font-black">
           {!isSameDay(selectedDate, new Date())
             ? format(selectedDate, "MMM, EEE, dd")
             : "Today"}

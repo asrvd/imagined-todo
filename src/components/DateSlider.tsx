@@ -70,6 +70,7 @@ export const DateSlider = ({
 
   return (
     <div className="mb-4 bg-white border border-zinc-200/70 shadow-lg rounded-b-[1.5rem] py-4">
+      <h3 className="text-[26px] leading-none font-black px-4">todos</h3>
       <Swiper
         modules={[Navigation, A11y, Mousewheel]}
         spaceBetween={16}

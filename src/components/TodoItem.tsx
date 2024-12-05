@@ -25,14 +25,14 @@ export const TodoItem = ({ todo, toggleTodo, deleteTodo }: TodoItemProps) => {
       <div className="flex-1">
         <h3
           className={clsx(
-            "font-semibold text-lg lg:text-xl leading-none",
+            "font-bold text-lg lg:text-xl leading-none",
             todo.completed ? "text-zinc-500 line-through" : ""
           )}
         >
           {todo.title}
         </h3>
         {todo.notes && (
-          <p className="text-sm text-zinc-700 leading-none mt-2">
+          <p className="text-sm text-zinc-700 font-medium leading-none mt-2">
             {todo.notes}
           </p>
         )}
