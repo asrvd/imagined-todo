@@ -33,7 +33,7 @@ export const TodoList = () => {
   );
 
   return (
-    <div className="space-y-4 lg:w-1/2 w-full">
+    <div className="space-y-4 lg:w-1/2 w-full mb-4">
       <DateSlider
         selectedDate={selectedDate}
         handleDateChange={handleDateChange}
