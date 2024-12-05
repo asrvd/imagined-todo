@@ -36,11 +36,11 @@ export const TodoItem = ({ todo, toggleTodo, deleteTodo }: TodoItemProps) => {
             {todo.notes}
           </p>
         )}
-        <div className="flex gap-2 mt-2">
+        <div className="grid grid-cols-2 lg:grid-cols-3 md:grid-cols-2 gap-2 mt-2 max-w-max">
           {todo.label && (
             <span
               className={clsx(
-                "text-xs px-2 py-1 rounded-xl",
+                "text-xs px-2 py-1 rounded-xl text-center",
                 todo.label === "personal"
                   ? "bg-blue-500/5 text-blue-600 border border-blue-500/10"
                   : "bg-green-500/5 text-green-600 border border-green-500/10"
@@ -52,7 +52,7 @@ export const TodoItem = ({ todo, toggleTodo, deleteTodo }: TodoItemProps) => {
           {todo.priority && (
             <span
               className={clsx(
-                "text-xs px-2 py-1 rounded-xl",
+                "text-xs px-2 py-1 rounded-xl text-center",
                 todo.priority === "low"
                   ? "bg-green-500/5 text-green-600 border border-green-500/10"
                   : todo.priority === "medium"
@@ -64,8 +64,8 @@ export const TodoItem = ({ todo, toggleTodo, deleteTodo }: TodoItemProps) => {
             </span>
           )}
           {todo.dueDate && (
-            <span className="text-xs px-2 py-1 rounded-xl bg-purple-500/5 text-purple-600 border border-purple-500/10">
-              Due: {format(new Date(todo.dueDate), "MMM dd, yyyy")}
+            <span className="text-xs px-2 py-1 rounded-xl bg-purple-500/5 text-purple-600 border border-purple-500/10 text-center">
+              {format(new Date(todo.dueDate), "MMM dd, yyyy")}
             </span>
           )}
         </div>
