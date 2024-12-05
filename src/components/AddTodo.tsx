@@ -73,7 +73,7 @@ export const AddTodo = ({ disabled }: { disabled: boolean }) => {
         <Button
           variant="outline"
           size="icon"
-          className="text-zinc- border-zinc-200/70 bg-white hover:bg-zinc-200/10 hover:text-zinc-900 transition-colors duration-300 ease-in-out rounded-full fixed bottom-4 translate-x-1/2 right-1/2 w-16 h-16 shadow-lg"
+          className="text-zinc- border-zinc-200/70 bg-white hover:bg-zinc-100/10 hover:text-zinc-900 transition-colors duration-300 ease-in-out rounded-full fixed bottom-4 translate-x-1/2 right-1/2 w-16 h-16 shadow-lg"
         >
           <PlusIcon strokeWidth={2} className="text-zinc-900 !w-6 !h-6" />
         </Button>

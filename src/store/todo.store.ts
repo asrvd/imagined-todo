@@ -13,7 +13,7 @@ interface TodoStore {
   toggleTodo: (id: string) => void;
 }
 
-const isClient = typeof window !== "undefined";
+const isClient = typeof window !== "undefined"; // needed to make sure localstorage is available
 
 const getStoredTodos = (): Todo[] => {
   if (!isClient) return [];
@@ -38,7 +38,7 @@ const setStoredTodos = (todos: Todo[]) => {
   try {
     localStorage.setItem("todos", JSON.stringify(todos));
   } catch (error) {
-    console.warn("Error writing todos to localStorage:", error);
+    console.error("Error writing todos to localStorage:", error);
   }
 };
 

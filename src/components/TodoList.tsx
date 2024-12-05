@@ -11,11 +11,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { useToggleTodo } from "@/store/todo.store";
 import clsx from "clsx";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Navigation,
-  A11y,
-  Mousewheel,
-} from "swiper/modules";
+import { Navigation, A11y, Mousewheel } from "swiper/modules";
 import "swiper/css";
 
 export const TodoList = () => {
@@ -30,7 +26,7 @@ export const TodoList = () => {
   }, [initialized, initializeTodos]);
 
   if (!initialized) {
-    return null;
+    return null; // waiting till dom is ready and localstorage is available
   }
 
   const handleDateChange = (date: Date) => {
@@ -99,7 +95,7 @@ export const TodoList = () => {
           centeredSlides={true}
           initialSlide={todayIndex}
           mousewheel={{
-            sensitivity: 0,
+            sensitivity: 2,
           }}
         >
           {Array.from({ length: TOTAL_DAYS }).map((_, index) => (
