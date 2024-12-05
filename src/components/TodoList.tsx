@@ -124,11 +124,17 @@ export const TodoList = () => {
       {filteredTodos.length === 0 ? (
         <div className="text-center py-8 text-gray-500 px-4 lg:px-0">
           <img
-            src="https://illustrations.popsy.co/white/remote-work.svg"
+            src={
+              isSameDay(selectedDate, new Date())
+                ? "https://illustrations.popsy.co/white/remote-work.svg"
+                : "https://illustrations.popsy.co/white/meditation-boy.svg"
+            }
             alt="No todos for this date"
             className="w-[500px] mx-auto"
           />
-          Nothing added yet. Click the + button to add your first todo.
+          {!isSameDay(selectedDate, new Date())
+            ? "No todos found for this date."
+            : "Nothing added yet. Click the + button to add your first todo."}
         </div>
       ) : (
         <ul className="space-y-2 px-4 lg:px-0">
